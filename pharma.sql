@@ -1,30 +1,32 @@
-create TABLE Hersteller (
+CREATE TABLE Hersteller (
     HerstellerID INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    Name VARCHAR(300)
+    Name VARCHAR(300) NOT NULL
     
 
 );
 
 CREATE TABLE Arzneimittel (
     AMID INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    Bezeichnung VARCHAR(300),
-    Preis VARCHAR(300),
-    rezeptpflichtig BOOLEAN,
-    HerstellerID INTEGER
+    Bezeichnung VARCHAR(300) NOT NULL,
+    Preis VARCHAR(300) NOT NULL,
+    rezeptpflichtig BOOLEAN NOT NULL,
+    HerstellerID INTEGER NOT NULL
 
 );
 
 CREATE TABLE Wirkstoff (
     WirkstoffId INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    Bezeichnung VARCHAR(300)
+    Bezeichnung VARCHAR(300) NOT NULL
 
 );
 
 CREATE TABLE Arzneimittelwirkstoffe (
-    AMID INTEGER,
-    Bezeichnung VARCHAR(300),
-    Menge VARCHAR(300),
-    WirkstoffId INTEGER 
+    AMID INTEGER NOT NULL,
+    Bezeichnung VARCHAR(300) NOT NULL,
+    Menge VARCHAR(300) NOT NULL,
+    WirkstoffId INTEGER NOT NULL,
+    
+    PRIMARY KEY(AMID, WirkstoffId)
 );
 
 ALTER TABLE Arzneimittel
@@ -47,8 +49,4 @@ INSERT INTO Hersteller VALUES
     
     
 INSERT INTO Arzneimittel VALUES
-    (1, 
-     'Grippostad', 
-     '5,99 EURO', 
-     false, 
-     1 );
+    (1, 'Grippostad', '5,99 EURO', false, 1 );
