@@ -50,3 +50,16 @@ INSERT INTO Hersteller VALUES
     
 INSERT INTO Arzneimittel VALUES
     (1, 'Grippostad', '5,99 EURO', false, 1 );
+
+
+/* Left Join Befehl 
+
+SELECT * FROM Arzneimittel 
+LEFT JOIN Arzneimittelwirkstoffe
+ON Arzneimittelwirkstoffe.AMID = Arzneimittel.AMID
+LEFT JOIN Wirkstoff
+ON Arzneimittelwirkstoffe.WirkstoffID;
+
+*/
+
+
