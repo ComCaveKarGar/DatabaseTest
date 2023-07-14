@@ -41,10 +41,14 @@ INSERT INTO Wirkstoff VALUES
     (3, 'THC');
     
 INSERT INTO Hersteller VALUES
-    (1, 'Bayer');
-    (2, 'Ratiopharm')
-    (3, 'BASF')
+    (1, 'Bayer'),
+    (2, 'Ratiopharm'),
+    (3, 'BASF'); 
     
     
 INSERT INTO Arzneimittel VALUES
-    (1, 'Grippostad', '5,99 EURO', false, 1 );
+    (1, 
+     'Grippostad', 
+     '5,99 EURO', 
+     false, 
+     1 );
